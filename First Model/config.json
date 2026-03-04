@@ -1,0 +1,24 @@
+{
+  "D_MODEL": 512,
+  "D_K": 256,
+  "FF_DIM": 3056,
+  "NUM_LAYERS": 6,
+  "VOCAB_SIZE": 30000,
+  "SEQ_LEN": 256,
+  "BATCH_SIZE": 64,
+  "LR": 0.0003,
+  "DROPOUT": 0.2,
+  "WEIGHT_DECAY": 0.05,
+  "GRAD_CLIP": 1.0,
+  "WARMUP_STEPS": 4000,
+  "GRAD_ACCUM_STEPS": 4,
+  "GRAD_CHECKPOINT": true,
+  "CONV_SPECIAL_TOKENS": [
+    "[PAD]",
+    "[UNK]",
+    "[BOS]",
+    "[EOS]",
+    "[SPK1]",
+    "[SPK2]"
+  ]
+}
