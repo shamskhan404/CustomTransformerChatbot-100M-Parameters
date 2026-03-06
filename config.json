@@ -1,0 +1,17 @@
+{
+  "d_model": 1024,
+  "d_k": 256,
+  "ff_dim": 3056,
+  "num_heads": 8,
+  "num_layers": 8,
+  "vocab_size": 20815,
+  "seq_len": 256,
+  "special_tokens": [
+    "[PAD]",
+    "[UNK]",
+    "[BOS]",
+    "[EOS]",
+    "[SPK1]",
+    "[SPK2]"
+  ]
+}
