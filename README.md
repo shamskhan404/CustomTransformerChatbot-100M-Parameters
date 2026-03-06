@@ -1,182 +1,198 @@
-#CustomTransformerChatbot-100M-Parameters
-Overview
+# CustomTransformerChatbot-100M-Parameters
 
-This project implements a Transformer-based chatbot trained from scratch with approximately 100 million parameters. The model integrates Rotary Positional Embeddings (RoPE) and optimized attention mechanisms to improve contextual understanding in conversations.
+## Overview
+
+This project implements a **Transformer-based chatbot trained from scratch with approximately 100 million parameters**.  
+The model integrates **Rotary Positional Embeddings (RoPE)** and optimized attention mechanisms to improve contextual understanding in conversations.
 
 The repository contains:
 
-The initial trained model
+- **Initial trained model**
+- **Improved best-performing model**
+- **Training notebooks**
+- **Testing notebooks**
+- **Chatbot interaction interface**
+- **Training metrics and statistics**
 
-The improved best-performing model
+Large model weight files are hosted separately on **Hugging Face** due to their size.
 
-Training notebooks
+---
 
-Testing notebooks
+# AIM
 
-A simple chatbot interaction interface
+***To develop a Transformer-based chatbot model integrating Rotary Positional Embeddings (RoPE) and optimized attention mechanisms for improved conversational quality.***
 
-Training metrics and statistics
+---
 
-Large model weight files are hosted separately on Hugging Face due to their size.
+# OBJECTIVES
 
-Aim
+1. **Design a modified Transformer architecture** that enhances word–position interactions for more context-aware responses.  
+2. **Train the chatbot on conversational datasets** using a custom tokenizer and transformer architecture.  
+3. **Evaluate chatbot performance** using training metrics and model outputs.  
+4. **Provide an interface for interacting with the trained chatbot.**
 
-To develop a Transformer-based chatbot model integrating Rotary Positional Embeddings (RoPE) and optimized attention mechanisms for improved conversational quality.
+---
+# MODEL ARCHITECTURE
 
-Objectives
+The chatbot is implemented using a **custom Transformer architecture built from scratch**.
 
-To design a modified Transformer architecture that enhances word–position interactions for more context-aware responses.
+### Key Components
 
-To train the chatbot on conversational datasets using a custom tokenizer and transformer architecture.
+- **Transformer architecture**
+- **Rotary Positional Embeddings (RoPE)**
+- **Multi-head self-attention**
+- **Custom tokenizer**
+- **PyTorch implementation**
 
-To evaluate chatbot performance using training metrics and model outputs.
+The design focuses on **improving the relationship between tokens and positional information** to generate more context-aware responses.
 
-To create a testing interface for interacting with the trained chatbot.
+---
 
-Repository Structure
+# REPOSITORY STRUCTURE
 
-The repository is organized into two main parts:
+The repository is organized into two main sections:
 
-First Model (Initial Training Version)
+## 1. First Model — Initial Training Version
 
-Best Model (Improved Version After Additional Training)
+## 2. Best Model — Improved Version After Additional Training
 
-First Model (Initial Training)
+---
 
-This section contains files related to the first trained version of the chatbot model.
+# FIRST MODEL (Initial Training)
 
-Files
+This section contains files related to the **first trained version of the chatbot model**.
 
-config.json
-Contains configuration parameters used during model training such as architecture settings, embedding dimensions, number of layers, and other hyperparameters.
+### Files
 
-tokenizer.json
+**config.json**
+
+Configuration file containing model parameters such as:
+
+- architecture settings  
+- embedding dimensions  
+- number of layers  
+- training hyperparameters
+
+---
+
+**tokenizer.json**
+
 Custom tokenizer used to convert input text into tokens before feeding them into the model.
 
-conv-model-training.ipynb
-Main notebook used for training the first version of the chatbot model.
+---
 
-Model Metrics Visualization
-A visual representation showing training performance and metrics after approximately 8 hours of training.
+**conv-model-training.ipynb**
 
-firstmodel.pth
+Main notebook used for **training the first version of the chatbot model**.
+
+---
+
+**Model Metrics Visualization**
+
+A visual representation showing **training performance and metrics after approximately 8 hours of training**.
+
+---
+
+**firstmodel.pth**
+
 Saved weights of the first trained model.
 
-Due to file size limitations, this model file is stored on Hugging Face.
+**Due to file size limitations, this file is stored on Hugging Face.**
 
-Best Model (Improved Version)
+---
 
-The remaining files in the repository correspond to the best-performing version of the chatbot model, trained for a longer duration and achieving better results.
+# BEST MODEL (Improved Version)
 
-Files
+The remaining files correspond to the **best-performing version of the chatbot model**, obtained after longer training.
 
-conv_model_training.ipynb
-Main notebook used for training the improved model.
+### Files
 
-CHATBOT.ipynb
-Notebook used to test the chatbot structure and inference process.
+**conv_model_training.ipynb**
 
-chat_ui.ipynb
-Notebook that demonstrates the chatbot user interface structure for testing.
+Main notebook used for **training the improved model**.
 
-chat_ui.py
-Python script that allows users to interact with the chatbot through a simple interface.
+---
 
-config.json
-Configuration file containing architecture and training parameters for the final model.
+**CHATBOT.ipynb**
 
-tokenizer.json
-Tokenizer used during training and inference of the final model.
+Notebook used for **testing the chatbot architecture and inference process**.
 
-training_stats.json
-File containing recorded training statistics such as training loss and progress.
+---
 
-model output after 12 hours of training.png
-Visualization of model training metrics after approximately 12 hours of training.
+**chat_ui.ipynb**
 
+Notebook demonstrating the **chatbot user interface structure for testing**.
+
+---
+
+**chat_ui.py**
+
+Python script allowing **users to interact with the chatbot through a simple interface**.
+
+---
+
+**config.json**
+
+Configuration file containing **architecture and training parameters used for the final model**.
+
+---
+
+**tokenizer.json**
+
+Tokenizer used during **training and inference of the final model**.
+
+---
+
+**training_stats.json**
+
+Contains **training statistics such as loss values and training progress**.
+
+---
+
+**model output after 12 hours of training.png**
+
+Visualization showing **training metrics after approximately 12 hours of training**.
+
+---
+
+**bestmodel.pth**
+
+Saved weights of the **best-performing model**.
+
+---
+
+**model_epoch_40.pth**
+
+Model weights saved at the **final training epoch (Epoch 40)**.
+
+---
+
+**model_weights.pth**
+
+Additional model weights required to **run the testing and chatbot interaction scripts**.
+
+**These files are hosted on Hugging Face because of their large size.**
+
+---
+
+# MODEL WEIGHTS
+
+Some model files are too large to store directly in this repository.
+
+Download them from **Hugging Face** and place them in the same directory as the testing scripts.
+
+Required files:
+firstmodel.pth  (for first model testing only).
 bestmodel.pth
-Weights of the best-performing trained model.
-
 model_epoch_40.pth
-Model weights saved at the final training epoch (epoch 40).
-
-model_weights.pth
-Additional model weights required to run the testing and chatbot interaction scripts.
-
-Due to large file sizes, these files are hosted on Hugging Face and must be downloaded separately.
-
-Model Weights
-
-Some model weight files are not stored directly in this repository because of their size.
-
-Download them from Hugging Face and place them in the same directory as the testing scripts.
-
-Required files include:
-
-firstmodel.pth
-
-bestmodel.pth
-
-model_epoch_40.pth
-
 model_weights.pth
 
-Hugging Face model repository:
+---
 
-[Insert Hugging Face link here]
-Running the Chatbot
-1. Clone the repository
-git clone https://github.com/yourusername/CustomTransformerChatbot-100M-Parameters.git
-cd CustomTransformerChatbot-100M-Parameters
-2. Install dependencies
-pip install torch numpy
-3. Download required model weights
+# NOTES
 
-Download the .pth files from Hugging Face and place them in the repository directory.
+Some scripts require **model weight files hosted on Hugging Face**.
 
-4. Run the chatbot interface
-python chat_ui.py
-Model Architecture
+Ensure all `.pth` files are downloaded before running the chatbot.
 
-The chatbot is implemented using a custom Transformer architecture built from scratch.
-
-Key components include:
-
-Transformer architecture
-
-Rotary Positional Embeddings (RoPE)
-
-Multi-head self-attention
-
-Custom tokenizer
-
-PyTorch implementation
-
-The design focuses on improving the relationship between tokens and positional information to generate more context-aware responses.
-
-Training Details
-
-First Model
-
-Training Time: ~8 hours
-
-Output: firstmodel.pth
-
-Best Model
-
-Training Time: ~12 hours
-
-Final Epoch: 40
-
-Output: bestmodel.pth
-
-Training statistics and visualizations are included in the repository.
-
-Notes
-
-Some testing scripts require model weight files that are hosted on Hugging Face.
-Ensure all required .pth files are downloaded before running the chatbot.
-
-Author
-
-Shams Tabrez Khan
+---
