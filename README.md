@@ -1,23 +1,5 @@
 # CustomTransformerChatbot-100M-Parameters
 
-## Overview
-
-This project implements a **Transformer-based chatbot trained from scratch with approximately 100 million parameters**.  
-The model integrates **Rotary Positional Embeddings (RoPE)** and optimized attention mechanisms to improve contextual understanding in conversations.
-
-The repository contains:
-
-- **Initial trained model**
-- **Improved best-performing model**
-- **Training notebooks**
-- **Testing notebooks**
-- **Chatbot interaction interface**
-- **Training metrics and statistics**
-
-Large model weight files are hosted separately on **Hugging Face** due to their size.
-
----
-
 # AIM
 
 ***To develop a Transformer-based chatbot model integrating Rotary Positional Embeddings (RoPE) and optimized attention mechanisms for improved conversational quality.***
